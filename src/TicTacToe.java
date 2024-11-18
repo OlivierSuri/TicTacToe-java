@@ -4,24 +4,28 @@ public class TicTacToe {
 
     public TicTacToe() {
         this.board = new Cell[SIZE][SIZE];
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                board[i][j] = new Cell(); // Initialisation avec une cellule vide
+            }
+        }
     }
 
     public void display() {
+        System.out.println(" " + "-".repeat(SIZE * 6 - 1));
         for (int i = 0; i < SIZE; i++) {
-            // Affiche une ligne du tableau avec | au début et à la fin
-            System.out.print("| "); // Barre verticale au début
-            for (int j = 0; j < SIZE; j++) {
-                System.out.print(board[i][j].getRepresentation()); // Affiche le contenu de la cellule
-                if (j < SIZE - 1) {
-                    System.out.print(" | "); // Séparateur vertical entre colonnes
-                }
-            }
-            System.out.println(" |"); // Barre verticale à la fin
 
-            // Ligne horizontale après chaque ligne (sauf la dernière)
+            System.out.print("| ");
+            for (int j = 0; j < SIZE; j++) {
+                System.out.print(board[i][j].getRepresentation());
+                    System.out.print(" | ");
+            }
+            System.out.println(" ");
+
             if (i < SIZE - 1) {
-                System.out.println(" " + "-".repeat(SIZE * 7 - 1));
+                System.out.println(" " + "-".repeat(SIZE * 6 - 1));
             }
         }
+        System.out.println(" " + "-".repeat(SIZE * 6 - 1));
     }
 }

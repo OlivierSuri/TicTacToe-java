@@ -4,7 +4,7 @@ public class Cell {
 
 
 
-    public String geTRepresentation (){
+    public String getRepresentation (){
         return "   ";
     }
 }
