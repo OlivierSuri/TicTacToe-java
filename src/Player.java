@@ -1,5 +1,4 @@
-public class Player {
-    private String name;
+public abstract class Player {
     private String representation;
 
     public Player(String representation) {
@@ -9,4 +8,7 @@ public class Player {
     public String getRepresentation() {
         return representation;
     }
+
+    // Méthode abstraite à implémenter dans les sous-classes
+    public abstract int[] getMove(Board board);
 }

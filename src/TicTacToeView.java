@@ -20,6 +20,25 @@ public class TicTacToeView {
         System.out.println(" " + "-".repeat(size * 6 - 1));
     }
 
+    public int menuGameTypeChoice(){
+        int gameTypeChoice;
+        do {
+            System.out.println("Choisissez le type de Partie");
+            System.out.println("PVP type : 1");
+            System.out.println("PVE type : 2");
+            System.out.println("BOT vs BOT type : 3");
+
+            while (!scanner.hasNextInt()) {
+                System.out.println("Veuillez entrer un chiffre valide (1, 2 ou 3) :");
+                scanner.next();
+            }
+
+            gameTypeChoice = scanner.nextInt();
+        } while (gameTypeChoice < 1 || gameTypeChoice > 3);
+
+        return gameTypeChoice;
+    }
+
     public int[] getMove(Player player) {
         System.out.println(player.getRepresentation() + ", entrez vos coordonnées :");
         int[] move = new int[2];

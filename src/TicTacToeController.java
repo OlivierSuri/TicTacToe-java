@@ -9,44 +9,59 @@ public class TicTacToeController {
         board = new Board();
         logic = new TicTacToeLogic(board);
         view = new TicTacToeView();
-        player1 = new Player(" X ");
-        player2 = new Player(" O ");
     }
 
     public void startGame() {
-        Player currentPlayer = player1;
-        boolean gameOngoing = true;
+        // Choix du type de partie
+        int gameType = view.menuGameTypeChoice();
+        switch (gameType) {
+            case 1: // Joueur contre Joueur
+                player1 = new HumanPlayer(" X ", view);
+                player2 = new HumanPlayer(" O ", view);
+                break;
+            case 2: // Joueur contre IA
+                player1 = new HumanPlayer(" X ", view);
+                player2 = new ArtificialPlayer(" O ");
+                break;
+            case 3: // IA contre IA
+                player1 = new ArtificialPlayer(" X ");
+                player2 = new ArtificialPlayer(" O ");
+                break;
+            default:
+                view.showMessage("Choix invalide. Relancez le jeu.");
+                return; // Arrête le jeu si le type est invalide
+        }
 
-        while (gameOngoing) {
-            view.displayBoard(board);
-            boolean validMove = false;
+        Player currentPlayer = player1; // Commence par le joueur 1
+
+        while (true) {
+            view.displayBoard(board); // Afficher le plateau
+
+            // Valider et appliquer le coup
             int row, col;
-            //valider le coup du joueur
-            do {
-                int[] move = view.getMove(currentPlayer);
+            while (true) {
+                int[] move = currentPlayer.getMove(board); // Obtenir le mouvement
                 row = move[0];
                 col = move[1];
 
-                if(logic.isValidMove(row, col)) {
+                if (logic.isValidMove(row, col)) {
                     board.getCell(row, col).setRepresentation(currentPlayer.getRepresentation());
-                    validMove = true;
-                }else {
-                    view.showMessage("Invalid move");
+                    break; // Coup valide, sortir de la boucle
+                } else {
+                    view.showMessage("Coup invalide. Essayez encore.");
                 }
-
             }
-           while (!validMove);
-            if (logic.isWinningMove(row, col, currentPlayer.getRepresentation()))   {
+
+            // Vérifier victoire ou égalité
+            if (logic.isWinningMove(row, col, currentPlayer.getRepresentation())) {
                 view.displayBoard(board);
-                view.showMessage("Winner is "+currentPlayer.getRepresentation());
-                gameOngoing = false;
+                view.showMessage("Le gagnant est : " + currentPlayer.getRepresentation() + " !");
+                break; // Terminer la boucle principale
             } else if (logic.isDraw()) {
                 view.displayBoard(board);
-                view.showMessage("Draw");
-                gameOngoing = false;
+                view.showMessage("Match nul !");
+                break; // Terminer la boucle principale
             }
-
-
 
             // Changer de joueur
             currentPlayer = (currentPlayer == player1) ? player2 : player1;
