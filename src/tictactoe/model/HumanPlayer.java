@@ -1,7 +1,12 @@
+package tictactoe.model;
+
+
+import tictactoe.TicTacToeView;
+
 public class HumanPlayer extends Player {
     private TicTacToeView view;
 
-    public HumanPlayer(String representation, TicTacToeView view) {
+    public HumanPlayer(Status representation, TicTacToeView view) {
         super(representation);
         this.view = view;
     }

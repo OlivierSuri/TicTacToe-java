@@ -1,3 +1,8 @@
+package tictactoe;
+
+import tictactoe.model.Board;
+import tictactoe.model.Status;
+
 public class TicTacToeLogic {
     private Board board;
 
@@ -12,13 +17,13 @@ public class TicTacToeLogic {
         return board.getCell(row, col).isEmpty();
     }
 
-    public boolean isWinningMove(int row, int col, String representation) {
+    public boolean isWinningMove(int row, int col, Status status) {
         int size = board.getSize();
 
         // Vérifier la ligne
         boolean winRow = true;
         for (int j = 0; j < size; j++) {
-            if (!board.getCell(row, j).getRepresentation().equals(representation)) {
+            if (!board.getCell(row, j).getStatus().equals(status)) {
                 winRow = false;
                 break;
             }
@@ -27,7 +32,7 @@ public class TicTacToeLogic {
         // Vérifier la colonne
         boolean winCol = true;
         for (int i = 0; i < size; i++) {
-            if (!board.getCell(i, col).getRepresentation().equals(representation)) {
+            if (!board.getCell(i, col).getStatus().equals(status)) {
                 winCol = false;
                 break;
             }
@@ -36,7 +41,7 @@ public class TicTacToeLogic {
         // Vérifier diagonales
         boolean winDiag1 = true;
         for (int i = 0; i < size; i++) {
-            if (!board.getCell(i, i).getRepresentation().equals(representation)) {
+            if (!board.getCell(i, i).getStatus().equals(status)) {
                 winDiag1 = false;
                 break;
             }
@@ -44,7 +49,7 @@ public class TicTacToeLogic {
         // Vérifier la diagonale secondaire
         boolean winDiag2 = true;
         for (int i = 0; i < size; i++) {
-            if (!board.getCell(i, size - 1 - i).getRepresentation().equals(representation)) {
+            if (!board.getCell(i, size - 1 - i).getStatus().equals(status)) {
                 winDiag2 = false;
                 break;
             }

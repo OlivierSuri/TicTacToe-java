@@ -1,9 +1,11 @@
+package tictactoe.model;
+
 import java.util.Random;
 
 public class ArtificialPlayer extends Player {
     private Random random;
 
-    public ArtificialPlayer(String representation) {
+    public ArtificialPlayer(Status representation) {
         super(representation);
         this.random = new Random();
     }

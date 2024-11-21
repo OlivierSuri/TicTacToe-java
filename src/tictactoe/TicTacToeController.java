@@ -1,31 +1,37 @@
+package tictactoe;
+
+import tictactoe.model.*;
+
 public class TicTacToeController {
-    private Board board;
-    private TicTacToeLogic logic;
-    private TicTacToeView view;
+    private final Board board;
+    private final TicTacToeLogic logic;
+    private final TicTacToeView view;
     private Player player1;
     private Player player2;
 
     public TicTacToeController() {
         board = new Board();
         logic = new TicTacToeLogic(board);
-        view = new TicTacToeView();
+        InteractionUtilisateur interaction = new InteractionUtilisateur(); // Créer une instance
+        view = new TicTacToeView(interaction); // Passer l'interaction à la vue
     }
 
     public void startGame() {
         // Choix du type de partie
         int gameType = view.menuGameTypeChoice();
+
         switch (gameType) {
             case 1: // Joueur contre Joueur
-                player1 = new HumanPlayer(" X ", view);
-                player2 = new HumanPlayer(" O ", view);
+                player1 = new HumanPlayer(Status.X, view);
+                player2 = new HumanPlayer(Status.O, view);
                 break;
             case 2: // Joueur contre IA
-                player1 = new HumanPlayer(" X ", view);
-                player2 = new ArtificialPlayer(" O ");
+                player1 = new HumanPlayer(Status.X, view);
+                player2 = new ArtificialPlayer(Status.O);
                 break;
             case 3: // IA contre IA
-                player1 = new ArtificialPlayer(" X ");
-                player2 = new ArtificialPlayer(" O ");
+                player1 = new ArtificialPlayer(Status.X);
+                player2 = new ArtificialPlayer(Status.O);
                 break;
             default:
                 view.showMessage("Choix invalide. Relancez le jeu.");
@@ -45,7 +51,7 @@ public class TicTacToeController {
                 col = move[1];
 
                 if (logic.isValidMove(row, col)) {
-                    board.getCell(row, col).setRepresentation(currentPlayer.getRepresentation());
+                    board.getCell(row, col).setStatus(currentPlayer.getStatus());
                     break; // Coup valide, sortir de la boucle
                 } else {
                     view.showMessage("Coup invalide. Essayez encore.");
@@ -53,9 +59,9 @@ public class TicTacToeController {
             }
 
             // Vérifier victoire ou égalité
-            if (logic.isWinningMove(row, col, currentPlayer.getRepresentation())) {
+            if (logic.isWinningMove(row, col, currentPlayer.getStatus())) {
                 view.displayBoard(board);
-                view.showMessage("Le gagnant est : " + currentPlayer.getRepresentation() + " !");
+                view.showMessage("Le gagnant est : " + currentPlayer.getStatus() + " !");
                 break; // Terminer la boucle principale
             } else if (logic.isDraw()) {
                 view.displayBoard(board);

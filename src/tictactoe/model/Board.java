@@ -1,3 +1,5 @@
+package tictactoe.model;
+
 public class Board {
     private final int SIZE = 3;
     private Cell[][] cells;

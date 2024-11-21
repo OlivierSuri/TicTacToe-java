@@ -1,7 +1,15 @@
-import java.util.Scanner;
+package tictactoe;
+
+import tictactoe.model.Board;
+import tictactoe.model.Player;
+import tictactoe.model.InteractionUtilisateur;
 
 public class TicTacToeView {
-    private Scanner scanner = new Scanner(System.in);
+    private final InteractionUtilisateur interaction;
+
+    public TicTacToeView(InteractionUtilisateur interaction) {
+        this.interaction = interaction;
+    }
 
     public void displayBoard(Board board) {
         int size = board.getSize();
@@ -28,26 +36,25 @@ public class TicTacToeView {
             System.out.println("PVE type : 2");
             System.out.println("BOT vs BOT type : 3");
 
-            while (!scanner.hasNextInt()) {
-                System.out.println("Veuillez entrer un chiffre valide (1, 2 ou 3) :");
-                scanner.next();
-            }
+            gameTypeChoice = interaction.getIntInput();// Utilise tictactoe.model.InteractionUtilisateur
 
-            gameTypeChoice = scanner.nextInt();
+            if (gameTypeChoice < 1 || gameTypeChoice > 3) {
+                System.out.println("Veuillez entrer un chiffre valide (1, 2 ou 3) :");
+            }
         } while (gameTypeChoice < 1 || gameTypeChoice > 3);
 
         return gameTypeChoice;
     }
 
     public int[] getMove(Player player) {
-        System.out.println(player.getRepresentation() + ", entrez vos coordonnées :");
-        int[] move = new int[2];
+        System.out.println(player.getStatus() + ", entrez vos coordonnées :");
         System.out.print("Ligne (0 à 2) : ");
-        move[0] = scanner.nextInt();
+        int row = interaction.getIntInput();
         System.out.print("Colonne (0 à 2) : ");
-        move[1] = scanner.nextInt();
-        return move;
+        int col = interaction.getIntInput();
+        return new int[]{row, col};
     }
+
 
     public void showMessage(String message) {
         System.out.println(message);
