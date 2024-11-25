@@ -1,19 +1,20 @@
-package tictactoe.model;
+package gomoku.model;
 
-import gomoku.model.GomokuBoard;
+import tictactoe.model.Status;
 
 import java.util.Random;
 
-public class ArtificialPlayer extends Player {
+public class GomokuArtificialPlayer extends GomokuPlayer {
+
     private Random random;
 
-    public ArtificialPlayer(Status representation) {
+    public GomokuArtificialPlayer(Status representation) {
         super(representation);
         this.random = new Random();
     }
 
     @Override
-    public int[] getMove(Board board) {
+    public int[] getMove(GomokuBoard board) {
         int row, col;
         do {
             row = random.nextInt(board.getSize());

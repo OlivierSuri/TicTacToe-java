@@ -1,12 +1,14 @@
-package tictactoe.model;
+package gomoku.model;
 
-public class Board {
-    private final int SIZE = 3;
+import tictactoe.model.Cell;
+
+public class GomokuBoard {
+
+    private final int SIZE = 15;
     private Cell[][] cells;
-    private int winRangeScanne = 3;
+    private int winRangeScanne = 5;
 
-
-    public Board() {
+    public GomokuBoard() {
         cells = new Cell[SIZE][SIZE];
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
@@ -37,11 +39,14 @@ public class Board {
         }
         return true;
     }
-
-    public boolean exist(int row, int col){
-        if (row >= 0 && row <= SIZE && col >= 0 && col <= SIZE) {
+    public boolean existe (int row, int col){
+        if (row > 0 && row < SIZE){
+            return true;
+        }
+        if (col > 0 && col > SIZE){
             return true;
         }
         return false;
     }
+
 }

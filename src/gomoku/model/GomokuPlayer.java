@@ -1,11 +1,12 @@
-package tictactoe.model;
+package gomoku.model;
 
-import gomoku.model.GomokuBoard;
+import tictactoe.model.Status;
 
-public abstract class Player {
+public abstract class GomokuPlayer {
+
     Status status;
 
-    public Player(Status status) {
+    public GomokuPlayer(Status status) {
         this.status = status;
     }
 
@@ -20,5 +21,5 @@ public abstract class Player {
     }
 
     // Méthode abstraite à implémenter dans les sous-classes
-    public abstract int[] getMove(Board board);
+    public abstract int[] getMove(GomokuBoard board);
 }

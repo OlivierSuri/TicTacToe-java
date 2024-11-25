@@ -1,30 +1,29 @@
-package tictactoe;
+package gomoku;
 
-import tictactoe.model.Board;
+import gomoku.model.GomokuBoard;
 import tictactoe.model.Status;
 
-public class TicTacToeLogic {
-    private Board board;
+public class GomokuLogic {
 
+    private GomokuBoard board;
 
-    public TicTacToeLogic(Board board) {
+    public GomokuLogic(GomokuBoard board) {
         this.board = board;
     }
 
     public boolean isValidMove(int row, int col) {
-        if (row < 0 || col < 0 || row >= board.getSize() || col >= board.getSize()) {
+        if (row < 0 || col<0 || row >= board.getSize() || col >= board.getSize()) {
             return false;
         }
         return board.getCell(row, col).isEmpty();
     }
 
-
     public boolean  isDraw(){
         return board.isFull();
     }
 
-
     public boolean isWinningMove(int row, int col, Status status) {
+
         int winRangeScanne = board.getWinRangeScanne(); // Le nombre de cases consécutives nécessaires pour gagner
 
         // Vérifier la ligne
@@ -68,6 +67,4 @@ public class TicTacToeLogic {
         // Vérifier si on a atteint le nombre requis de cases consécutives
         return count >= winRangeScanne;
     }
-
-
 }

@@ -1,11 +1,12 @@
-package tictactoe.model;
+package gomoku;
 
 import java.util.Scanner;
 
-public class InteractionUtilisateur {
+public class GomokuInteractionUtilisateur {
+
     private Scanner sc;
 
-    public InteractionUtilisateur() {
+    public GomokuInteractionUtilisateur() {
         sc = new Scanner(System.in);
     }
 

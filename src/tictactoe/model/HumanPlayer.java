@@ -1,6 +1,5 @@
 package tictactoe.model;
 
-
 import tictactoe.TicTacToeView;
 
 public class HumanPlayer extends Player {
@@ -16,3 +15,4 @@ public class HumanPlayer extends Player {
         return view.getMove(this); // Demande les coordonnées au joueur via la vue
     }
 }
+
