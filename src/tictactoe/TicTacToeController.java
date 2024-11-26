@@ -2,32 +2,37 @@ package tictactoe;
 
 import tictactoe.model.*;
 
+import java.util.Scanner;
+
+
 public class TicTacToeController {
     private final Board board;
     private final TicTacToeLogic logic;
     private final TicTacToeView ticTacToeView;
+    private final InteractionUtilisateur interaction;
     private Player player1;
     private Player player2;
 
     public TicTacToeController() {
         board = new Board();
         logic = new TicTacToeLogic(board);
-        InteractionUtilisateur interaction = new InteractionUtilisateur(); // Créer une instance
-        ticTacToeView = new TicTacToeView(interaction); // Passer l'interaction à la vue
+        interaction = new InteractionUtilisateur(); // Créer une instance
+        ticTacToeView = new TicTacToeView(); // Passer l'interaction à la vue
     }
 
     public void startGame() {
-        // Choix du type de partie
 
-        int gameType = ticTacToeView.menuGameTypeChoice();
+        // Affichage choix du type de partie
+        ticTacToeView.displayMenuGameTypeChoice();
+        int gameType = interaction.menuGameTypeChoice();
 
-        switch (gameType) {
+                switch (gameType) {
             case 1: // Joueur contre Joueur
-                player1 = new HumanPlayer(Status.X, ticTacToeView);
-                player2 = new HumanPlayer(Status.O, ticTacToeView);
+                player1 = new HumanPlayer(Status.X, interaction);
+                player2 = new HumanPlayer(Status.O, interaction);
                 break;
             case 2: // Joueur contre IA
-                player1 = new HumanPlayer(Status.X, ticTacToeView);
+                player1 = new HumanPlayer(Status.X, interaction);
                 player2 = new ArtificialPlayer(Status.O);
                 break;
             case 3: // IA contre IA
@@ -47,7 +52,14 @@ public class TicTacToeController {
             // Valider et appliquer le coup
             int row, col;
             while (true) {
-                int[] move = currentPlayer.getMove(board); // Obtenir le mouvement
+                int[] move = currentPlayer.getMove(board); // Obtenir le mouvement en polymorphisme de player
+                /**      int[] move;
+                 *       if (currentPlayer isntanceof HumanPlayer){ //obtenir le mouvement de chaque player human ou IA
+                 *           move = getMoveInput(currentPlayer);  //respect MVC
+                 *       }else {
+                 *          move = currentPlayer.getMove(board);
+                 *       }
+                  */
                 row = move[0];
                 col = move[1];
 
@@ -74,4 +86,5 @@ public class TicTacToeController {
             currentPlayer = (currentPlayer == player1) ? player2 : player1;
         }
     }
+
 }

@@ -1,7 +1,5 @@
 package tictactoe.model;
 
-import gomoku.model.GomokuBoard;
-
 import java.util.Random;
 
 public class ArtificialPlayer extends Player {

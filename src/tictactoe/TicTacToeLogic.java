@@ -47,7 +47,7 @@ public class TicTacToeLogic {
         for (int i = 1; i < winRangeScanne; i++) {
             int newRow = row + i * dRow;
             int newCol = col + i * dCol;
-            if (newRow < 0 || newRow >= board.getSize() || newCol < 0 || newCol >= board.getSize() ||
+            if (!board.exist(newRow, newCol) ||
                     !board.getCell(newRow, newCol).getStatus().equals(status)) {
                 break;
             }
@@ -58,7 +58,7 @@ public class TicTacToeLogic {
         for (int i = 1; i < winRangeScanne; i++) {
             int newRow = row - i * dRow;
             int newCol = col - i * dCol;
-            if (newRow < 0 || newRow >= board.getSize() || newCol < 0 || newCol >= board.getSize() ||
+            if (!board.exist(newRow, newCol) ||
                     !board.getCell(newRow, newCol).getStatus().equals(status)) {
                 break;
             }
