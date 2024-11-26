@@ -6,14 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="094c77cf-a1e1-459f-94da-025ab89bedb3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gomoku/GomokuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/GomokuView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe/InteractionUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/InteractionUtilisateur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe/TicTacToeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TicTacToeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe/TicTacToeLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TicTacToeLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe/TicTacToeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TicTacToeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe/model/ArtificialPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/model/ArtificialPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/model/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe/model/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/model/HumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/model/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,7 @@
       <workItem from="1732175938737" duration="21030000" />
       <workItem from="1732262133281" duration="21650000" />
       <workItem from="1732521650728" duration="19453000" />
-      <workItem from="1732608728179" duration="16089000" />
+      <workItem from="1732608728179" duration="22423000" />
     </task>
     <servers />
   </component>

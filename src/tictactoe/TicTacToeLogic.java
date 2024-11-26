@@ -27,14 +27,21 @@ public class TicTacToeLogic {
     public boolean isWinningMove(int row, int col, Status status) {
         int winRangeScanne = board.getWinRangeScanne(); // Le nombre de cases consécutives nécessaires pour gagner
 
-        // Vérifier la ligne
-        if (checkDirection(row, col, status, 0, 1, winRangeScanne)) return true; // Horizontal
-        // Vérifier la colonne
-        if (checkDirection(row, col, status, 1, 0, winRangeScanne)) return true; // Vertical
-        // Vérifier diagonale principale
-        if (checkDirection(row, col, status, 1, 1, winRangeScanne)) return true; // Diagonale principale
-        // Vérifier diagonale secondaire
-        if (checkDirection(row, col, status, 1, -1, winRangeScanne)) return true; // Diagonale secondaire
+//        for (int i = 0; i < board.getSize(); i++) {
+//            for (int j = 0; j < board.getSize(); j++) {
+
+                // Vérifier la ligne
+                if (checkDirection(row, col, status, 0, 1, winRangeScanne)) return true; // Horizontal
+                // Vérifier la colonne
+                if (checkDirection(row, col, status, 1, 0, winRangeScanne)) return true; // Vertical
+                // Vérifier diagonale principale
+                if (checkDirection(row, col, status, 1, 1, winRangeScanne)) return true; // Diagonale principale
+                // Vérifier diagonale secondaire
+                if (checkDirection(row, col, status, 1, -1, winRangeScanne)) return true; // Diagonale secondaire
+
+//            }
+//
+//        }
 
         return false;
     }
@@ -44,9 +51,9 @@ public class TicTacToeLogic {
         int count = 1; // La case actuelle compte déjà pour 1
 
         // Compter les cases dans la direction positive (dRow, dCol)
-        for (int i = 1; i < winRangeScanne; i++) {
-            int newRow = row + i * dRow;
-            int newCol = col + i * dCol;
+        for (int k = 1; k < winRangeScanne; k++) {
+            int newRow = row + k * dRow;
+            int newCol = col + k * dCol;
             if (!board.exist(newRow, newCol) ||
                     !board.getCell(newRow, newCol).getStatus().equals(status)) {
                 break;

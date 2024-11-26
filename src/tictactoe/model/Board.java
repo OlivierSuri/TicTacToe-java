@@ -39,7 +39,7 @@ public class Board {
     }
 
     public boolean exist(int row, int col){
-        if (row >= 0 && row <= SIZE && col >= 0 && col <= SIZE) {
+        if (row >= 0 && row < SIZE && col >= 0 && col < SIZE) {
             return true;
         }
         return false;

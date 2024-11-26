@@ -35,8 +35,8 @@ public class TicTacToeView {
 
     public void displayPlayerMoveMenu(Player player) {
         System.out.println(player.getStatus() + ", entrez vos coordonnées :");
-        System.out.print("Ligne (0 à 2) : ");
-        System.out.print("Colonne (0 à 2) : ");
+        System.out.println("Ligne (0 à 2) : ");
+        System.out.println("Colonne (0 à 2) : ");
     }
 
 

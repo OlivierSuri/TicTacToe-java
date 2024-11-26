@@ -26,6 +26,7 @@ public class TicTacToeController {
         ticTacToeView.displayMenuGameTypeChoice();
         int gameType = interaction.menuGameTypeChoice();
 
+
                 switch (gameType) {
             case 1: // Joueur contre Joueur
                 player1 = new HumanPlayer(Status.X, interaction);
@@ -48,18 +49,18 @@ public class TicTacToeController {
 
         while (true) {
             ticTacToeView.displayBoard(board); // Afficher le plateau
-
+            ticTacToeView.displayPlayerMoveMenu(currentPlayer);
             // Valider et appliquer le coup
             int row, col;
             while (true) {
-                int[] move = currentPlayer.getMove(board); // Obtenir le mouvement en polymorphisme de player
-                /**      int[] move;
-                 *       if (currentPlayer isntanceof HumanPlayer){ //obtenir le mouvement de chaque player human ou IA
-                 *           move = getMoveInput(currentPlayer);  //respect MVC
-                 *       }else {
-                 *          move = currentPlayer.getMove(board);
-                 *       }
-                  */
+//                int[] move = currentPlayer.getMove(board); // Obtenir le mouvement en polymorphisme de player
+                    int[] move;
+                       if (currentPlayer instanceof ArtificialPlayer ap){ //obtenir le mouvement de chaque player human ou IA
+                          move = ap.getMove(board);  //respect MVC
+                       }else {
+                        move = interaction.getMoveInput();
+                        }
+
                 row = move[0];
                 col = move[1];
 

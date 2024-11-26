@@ -20,5 +20,5 @@ public abstract class Player {
     }
 
     // Méthode abstraite à implémenter dans les sous-classes
-    public abstract int[] getMove(Board board);
+//    public abstract int[] getMove(Board board);
 }

@@ -12,10 +12,10 @@ public class HumanPlayer extends Player {
 
     }
 
-    @Override
-    public int[] getMove(Board board) {
-        // Appel au système d'interaction pour demander un coup
-        return interaction.getMoveInput();
-    }
+//    @Override
+//    public int[] getMove(Board board) {
+//        // Appel au système d'interaction pour demander un coup
+//        return interaction.getMoveInput();
+//    }
 }
 

@@ -13,10 +13,12 @@ public class InteractionUtilisateur {
     public int menuGameTypeChoice() {
         int gameTypeChoice;
 
-        gameTypeChoice = getIntInput();// Utilise tictactoe.InteractionUtilisateur
 
         do {
+            gameTypeChoice = getIntInput();
+            if (gameTypeChoice < 1 || gameTypeChoice > 3) {
             System.out.println("Veuillez entrer un chiffre valide (1, 2 ou 3) :");
+            }
         } while (gameTypeChoice < 1 || gameTypeChoice > 3);
         return gameTypeChoice;
     }
