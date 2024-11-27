@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="094c77cf-a1e1-459f-94da-025ab89bedb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/demo/AIPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/GameRulesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/HumanPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/InteractUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/Mover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/PlayerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/PosStrategies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/PositionGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/RandomPos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/TicTacToeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TicTacToeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/TicTacToeLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TicTacToeLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/model/HumanPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,12 +97,35 @@
       <workItem from="1732262133281" duration="21650000" />
       <workItem from="1732521650728" duration="19453000" />
       <workItem from="1732608728179" duration="22575000" />
-      <workItem from="1732696030357" duration="12942000" />
+      <workItem from="1732696030357" duration="14211000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
