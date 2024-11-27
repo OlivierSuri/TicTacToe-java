@@ -15,7 +15,7 @@ public class TicTacToeController {
 
     public TicTacToeController() {
         board = new Board();
-        logic = new TicTacToeLogic(board);
+        logic = new TicTacToeLogic();
         interaction = new InteractionUtilisateur(); // Créer une instance
         ticTacToeView = new TicTacToeView(); // Passer l'interaction à la vue
     }
@@ -64,7 +64,7 @@ public class TicTacToeController {
                 row = move[0];
                 col = move[1];
 
-                if (logic.isValidMove(row, col)) {
+                if (logic.isValidMove(board, row, col)) {
                     board.getCell(row, col).setStatus(currentPlayer.getStatus());
                     break; // Coup valide, sortir de la boucle
                 } else {
@@ -73,11 +73,11 @@ public class TicTacToeController {
             }
 
             // Vérifier victoire ou égalité
-            if (logic.isWinningMove(row, col, currentPlayer.getStatus())) {
+            if (logic.isWinningMove(board, row, col, currentPlayer.getStatus())) {
                 ticTacToeView.displayBoard(board);
                 ticTacToeView.showMessage("Le gagnant est : " + currentPlayer.getStatus() + " !");
                 break; // Terminer la boucle principale
-            } else if (logic.isDraw()) {
+            } else if (logic.isDraw(board)) {
                 ticTacToeView.displayBoard(board);
                 ticTacToeView.showMessage("Match nul !");
                 break; // Terminer la boucle principale

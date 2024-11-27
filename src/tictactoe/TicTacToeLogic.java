@@ -4,14 +4,8 @@ import tictactoe.model.Board;
 import tictactoe.model.Status;
 
 public class TicTacToeLogic {
-    private Board board;
 
-
-    public TicTacToeLogic(Board board) {
-        this.board = board;
-    }
-
-    public boolean isValidMove(int row, int col) {
+    public boolean isValidMove(Board board, int row, int col) {
         if (row < 0 || col < 0 || row >= board.getSize() || col >= board.getSize()) {
             return false;
         }
@@ -19,12 +13,12 @@ public class TicTacToeLogic {
     }
 
 
-    public boolean  isDraw(){
+    public boolean  isDraw(Board board){
         return board.isFull();
     }
 
 
-    public boolean isWinningMove(int row, int col, Status status) {
+    public boolean isWinningMove(Board board, int row, int col, Status status) {
         int winRangeScanne = board.getWinRangeScanne(); // Le nombre de cases consécutives nécessaires pour gagner
 
 //        for (int i = 0; i < board.getSize(); i++) {
@@ -47,7 +41,7 @@ public class TicTacToeLogic {
     }
 
     // Méthode pour vérifier une direction spécifique (horizontal, vertical, diagonale)
-    private boolean checkDirection(int row, int col, Status status, int dRow, int dCol, int winRangeScanne) {
+    private boolean checkDirection(Board board, int row, int col, Status status, int dRow, int dCol, int winRangeScanne) {
         int count = 1; // La case actuelle compte déjà pour 1
 
         // Compter les cases dans la direction positive (dRow, dCol)
