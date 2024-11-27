@@ -1,7 +1,5 @@
 package tictactoe.model;
 
-import gomoku.model.GomokuBoard;
-
 import java.util.Random;
 
 public class ArtificialPlayer extends Player {
@@ -12,7 +10,7 @@ public class ArtificialPlayer extends Player {
         this.random = new Random();
     }
 
-    @Override
+//    @Override
     public int[] getMove(Board board) {
         int row, col;
         do {

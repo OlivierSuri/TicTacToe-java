@@ -9,6 +9,26 @@ public class InteractionUtilisateur {
         sc = new Scanner(System.in);
     }
 
+    //Choix de type de partie (pvp/pve)
+    public int menuGameTypeChoice() {
+        int gameTypeChoice;
+
+
+        do {
+            gameTypeChoice = getIntInput();
+            if (gameTypeChoice < 1 || gameTypeChoice > 3) {
+            System.out.println("Veuillez entrer un chiffre valide (1, 2 ou 3) :");
+            }
+        } while (gameTypeChoice < 1 || gameTypeChoice > 3);
+        return gameTypeChoice;
+    }
+
+    public int[] getMoveInput(){
+        int row, col;
+        row = getIntInput();
+        col = getIntInput();
+        return new int[]{row, col};
+    }
 
     // Méthode pour lire un entier avec validation
     public int getIntInput() {
@@ -19,11 +39,4 @@ public class InteractionUtilisateur {
         return sc.nextInt();
     }
 
-    // Méthode pour lire un tableau de deux entiers (coordonnées)
-    public int[] getCoordinatesInput() {
-        int[] coordinates = new int[2];
-        coordinates[0] = getIntInput(); // La vue affichera "Ligne :"
-        coordinates[1] = getIntInput(); // La vue affichera "Colonne :"
-        return coordinates;
-    }
 }

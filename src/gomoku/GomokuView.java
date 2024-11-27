@@ -10,6 +10,7 @@ public class GomokuView {
     private final InteractionUtilisateur interaction;
 
     public GomokuView(InteractionUtilisateur interaction) {
+
         this.interaction = interaction;
     }
 

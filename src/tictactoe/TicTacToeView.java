@@ -4,11 +4,8 @@ import tictactoe.model.Board;
 import tictactoe.model.Player;
 
 public class TicTacToeView {
-    private final InteractionUtilisateur interaction;
 
-    public TicTacToeView(InteractionUtilisateur interaction) {
-        this.interaction = interaction;
-    }
+
 
     public void displayBoard(Board board) {
         int size = board.getSize();
@@ -27,31 +24,19 @@ public class TicTacToeView {
         System.out.println(" " + "-".repeat(size * 6 - 1));
     }
 
-    public int menuGameTypeChoice(){
-        int gameTypeChoice;
-        do {
+    public void displayMenuGameTypeChoice(){
+
             System.out.println("Choisissez le type de Partie");
             System.out.println("PVP type : 1");
             System.out.println("PVE type : 2");
             System.out.println("BOT vs BOT type : 3");
 
-            gameTypeChoice = interaction.getIntInput();// Utilise tictactoe.InteractionUtilisateur
-
-            if (gameTypeChoice < 1 || gameTypeChoice > 3) {
-                System.out.println("Veuillez entrer un chiffre valide (1, 2 ou 3) :");
-            }
-        } while (gameTypeChoice < 1 || gameTypeChoice > 3);
-
-        return gameTypeChoice;
     }
 
-    public int[] getMove(Player player) {
+    public void displayPlayerMoveMenu(Player player) {
         System.out.println(player.getStatus() + ", entrez vos coordonnées :");
-        System.out.print("Ligne (0 à 2) : ");
-        int row = interaction.getIntInput();
-        System.out.print("Colonne (0 à 2) : ");
-        int col = interaction.getIntInput();
-        return new int[]{row, col};
+        System.out.println("Ligne (0 à 2) : ");
+        System.out.println("Colonne (0 à 2) : ");
     }
 
 

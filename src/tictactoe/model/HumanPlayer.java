@@ -1,18 +1,21 @@
 package tictactoe.model;
 
-import tictactoe.TicTacToeView;
+import tictactoe.InteractionUtilisateur;
 
 public class HumanPlayer extends Player {
-    private TicTacToeView view;
 
-    public HumanPlayer(Status representation, TicTacToeView view) {
+    private final InteractionUtilisateur interaction;
+
+    public HumanPlayer(Status representation, InteractionUtilisateur interaction) {
         super(representation);
-        this.view = view;
+        this.interaction = interaction;
+
     }
 
-    @Override
-    public int[] getMove(Board board) {
-        return view.getMove(this); // Demande les coordonnées au joueur via la vue
-    }
+//    @Override
+//    public int[] getMove() {
+//        // Appel au système d'interaction pour demander un coup
+//        return interaction.getMoveInput();
+//    }
 }
 
