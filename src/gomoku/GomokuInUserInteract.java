@@ -2,11 +2,11 @@ package gomoku;
 
 import java.util.Scanner;
 
-public class GomokuInteractionUtilisateur {
+public class GomokuInUserInteract {
 
     private Scanner sc;
 
-    public GomokuInteractionUtilisateur() {
+    public GomokuInUserInteract() {
         sc = new Scanner(System.in);
     }
 
