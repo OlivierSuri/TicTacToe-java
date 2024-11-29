@@ -1,24 +1,21 @@
 package connect4;
 
-import common.model.Status;
-import connect4.model.ArtificialPlayer;
-import common.model.Board;
-import connect4.model.HumanPlayer;
-import connect4.model.Player;
+import common.model.*;
 import games.Game;
+import common.model.InteractionUtilisateur;
 
 public class ConnectFourController implements Game {
     private final Board board;
     private final ConnectFourView view;
-    private final C4InteractionUtilisateur interaction;
+    private final InteractionUtilisateur interaction;
     private final ConnectFourLogic logic;
     private Player player1;
     private Player player2;
 
     public ConnectFourController() {
-        board = new Board(6,7,4);
+        board = new Board(6,7,4, 1);
         view = new ConnectFourView();
-        interaction = new C4InteractionUtilisateur();
+        interaction = new InteractionUtilisateur();
         logic = new ConnectFourLogic();
     }
 
@@ -54,7 +51,7 @@ public class ConnectFourController implements Game {
                 int row;
 
                 while (true) {
-                    col = currentPlayer.getMove(board);
+                    col = currentPlayer.getMove(board)[0];
 
                     if (!board.isColumnFull(col)) {
                         break;

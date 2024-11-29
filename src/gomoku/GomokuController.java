@@ -6,7 +6,7 @@ import common.model.Player;
 import common.model.ArtificialPlayer;
 import common.model.Board;
 import common.model.HumanPlayer;
-import tictactoe.InteractionUtilisateur;
+import common.model.InteractionUtilisateur;
 
 public class GomokuController implements Game {
 
@@ -18,7 +18,7 @@ public class GomokuController implements Game {
     private Player player2;
 
     public GomokuController() {
-        board = new Board(15,15,5);
+        board = new Board(15,15,5, 2);
         logic = new GomokuLogic();
         interaction = new InteractionUtilisateur(); // Créer une instance
         gomokuView = new GomokuView(interaction); // Passer l'interaction à la vue

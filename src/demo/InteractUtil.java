@@ -1,6 +1,6 @@
 package demo;
 
-import tictactoe.InteractionUtilisateur;
+import common.model.InteractionUtilisateur;
 
 public class InteractUtil extends InteractionUtilisateur implements PositionGenerator {
     @Override

@@ -6,10 +6,17 @@ public class Board {
     private Cell[][] cells;
     private int winRangeScanne;
 
-    public Board(int sizeX, int sizeY, int winRangeScanne) {
+    public int getNbCoord() {
+        return nbCoord;
+    }
+
+    private int nbCoord;
+
+    public Board(int sizeX, int sizeY, int winRangeScanne, int nbCoord) {
         this.sizeX = sizeX;
         this.sizeY = sizeY;
         this.winRangeScanne = winRangeScanne;
+        this.nbCoord = nbCoord;
         cells = new Cell[sizeX][sizeY];
         for (int i = 0; i < sizeX; i++) {
             for (int j = 0; j < sizeY; j++) {

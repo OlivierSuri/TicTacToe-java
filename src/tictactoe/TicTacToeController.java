@@ -13,7 +13,7 @@ public class TicTacToeController implements Game {
     private Player player2;
 
     public TicTacToeController() {
-        board = new Board(3,3,3);
+        board = new Board(3,3,3, 2);
         logic = new TicTacToeLogic();
         interaction = new InteractionUtilisateur(); // Créer une instance
         ticTacToeView = new TicTacToeView(); // Passer l'interaction à la vue

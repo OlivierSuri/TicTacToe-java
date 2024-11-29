@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 //        ApplicationController appController = new ApplicationController();
 //        appController.startApplication();
-        GomokuController gomokuController = new GomokuController();
-        gomokuController.startGame();
+        ConnectFourController connectFourController = new ConnectFourController();
+        connectFourController.startGame();
     }
 }

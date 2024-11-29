@@ -2,7 +2,7 @@ package gomoku;
 
 import common.model.Player;
 import common.model.Board;
-import tictactoe.InteractionUtilisateur;
+import common.model.InteractionUtilisateur;
 
 public class GomokuView {
 
@@ -40,7 +40,7 @@ public class GomokuView {
             System.out.println("PVE type : 2");
             System.out.println("BOT vs BOT type : 3");
 
-            gameTypeChoice = interaction.getIntInput();// Utilise tictactoe.InteractionUtilisateur
+            gameTypeChoice = interaction.getIntInput();// Utilise common.model.InteractionUtilisateur
 
             if (gameTypeChoice < 1 || gameTypeChoice > 3) {
                 System.out.println("Veuillez entrer un chiffre valide (1, 2 ou 3) :");

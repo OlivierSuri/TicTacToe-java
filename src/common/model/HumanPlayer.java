@@ -1,7 +1,5 @@
 package common.model;
 
-import tictactoe.InteractionUtilisateur;
-
 public class HumanPlayer extends Player {
 
     private final InteractionUtilisateur interaction;
@@ -15,6 +13,6 @@ public class HumanPlayer extends Player {
     @Override
     public int[] getMove(Board board) {
         // Appel au système d'interaction pour demander un coup
-        return interaction.getMoveInput();
+        return interaction.getMoveInput(board.getNbCoord());
     }
 }
