@@ -1,7 +1,7 @@
 package gomoku;
 
 import gomoku.model.GomHumanPlayer;
-import gomoku.model.GomokuBoard;
+import common.model.Board;
 import tictactoe.InteractionUtilisateur;
 
 public class GomokuView {
@@ -14,21 +14,22 @@ public class GomokuView {
         this.interaction = interaction;
     }
 
-    public void displayBoard(GomokuBoard board) {
-        int size = board.getSize();
-        System.out.println("   " + "-".repeat(size * 6 - 1));
-        for (int i = 0; i < size; i++) {
+    public void displayBoard(Board board) {
+        int sizeX = board.getSizeX();
+        int sizeY = board.getSizeY();
+        System.out.println("   " + "-".repeat(sizeX * 6 - 1));
+        for (int i = 0; i < sizeX; i++) {
             System.out.print(i + "| ");
-            for (int j = 0; j < size; j++) {
-                System.out.print(board.getCell(i, j).getRepresentation());
+            for (int j = 0; j < sizeY; j++) {
+                System.out.print(board.getCells(i, j).getRepresentation());
                 System.out.print(" | ");
             }
             System.out.println();
-            if (i < size - 1) {
-                System.out.println("   " + "-".repeat(size * 6 - 1));
+            if (i < sizeX - 1) {
+                System.out.println("   " + "-".repeat(sizeX * 6 - 1));
             }
         }
-        System.out.println("   " + "-".repeat(size * 6 - 1));
+        System.out.println("   " + "-".repeat(sizeX * 6 - 1));
     }
 
     public int menuGameTypeChoice(){

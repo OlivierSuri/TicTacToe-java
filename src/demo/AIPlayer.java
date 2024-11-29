@@ -1,6 +1,6 @@
 package demo;
 
-import tictactoe.model.Board;
+import common.model.Board;
 
 public class AIPlayer extends Player {
 

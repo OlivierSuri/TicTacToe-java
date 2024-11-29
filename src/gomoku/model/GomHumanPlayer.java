@@ -1,8 +1,7 @@
 package gomoku.model;
 
+import common.model.Board;
 import gomoku.GomokuView;
-import gomoku.GomokuView;
-import gomoku.model.GomokuPlayer;
 import tictactoe.model.Status;
 
 public class GomHumanPlayer extends GomokuPlayer {
@@ -15,7 +14,7 @@ public class GomHumanPlayer extends GomokuPlayer {
     }
 
     @Override
-    public int[] getMove(GomokuBoard board) {
+    public int[] getMove(Board board) {
         return view.getMove(this); // Demande les coordonnées au joueur via la vue
     }
 }

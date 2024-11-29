@@ -1,5 +1,7 @@
 package tictactoe.model;
 
+import common.model.Board;
+
 import java.util.Random;
 
 public class ArtificialPlayer extends Player {
@@ -10,13 +12,13 @@ public class ArtificialPlayer extends Player {
         this.random = new Random();
     }
 
-//    @Override
+    @Override
     public int[] getMove(Board board) {
         int row, col;
         do {
-            row = random.nextInt(board.getSize());
-            col = random.nextInt(board.getSize());
-        } while (!board.getCell(row, col).isEmpty());
+            row = random.nextInt(board.getSizeX());
+            col = random.nextInt(board.getSizeY());
+        } while (!board.getCells(row, col).isEmpty());
         return new int[]{row, col};
     }
 }

@@ -10,8 +10,8 @@ public class PlayerFactory {
         };
     }
 
-    public static Player makePlayer(PosStrategies strategy){
-        return switch (strategy){
+    public static Player makePlayer(PosStrategies strategy) {
+        return switch (strategy) {
             case HUMAN -> new HumanPlayer();
             case AI -> new AIPlayer();
         };

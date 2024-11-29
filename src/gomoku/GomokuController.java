@@ -1,28 +1,30 @@
 package gomoku;
 
+import games.Game;
 import gomoku.model.GomHumanPlayer;
 import gomoku.model.GomokuArtificialPlayer;
-import gomoku.model.GomokuBoard;
+import common.model.Board;
 import gomoku.model.GomokuPlayer;
 import tictactoe.InteractionUtilisateur;
 import tictactoe.model.Status;
 
 
-public class GomokuController {
+public class GomokuController implements Game {
 
-    private final GomokuBoard board;
+    private final Board board;
     private final GomokuLogic logic;
     private final GomokuView gomokuView;
     private GomokuPlayer player1;
     private GomokuPlayer player2;
 
     public GomokuController() {
-        board = new GomokuBoard();
-        logic = new GomokuLogic(board);
+        board = new Board(15,15,5);
+        logic = new GomokuLogic();
         InteractionUtilisateur interaction = new InteractionUtilisateur(); // Créer une instance
         gomokuView = new GomokuView(interaction); // Passer l'interaction à la vue
     }
 
+    @Override
     public void startGame() {
         // Choix du type de partie
         int gameType = gomokuView.menuGameTypeChoice();
@@ -57,8 +59,8 @@ public class GomokuController {
                 row = move[0];
                 col = move[1];
 
-                if (logic.isValidMove(row, col)) {
-                    board.getCell(row, col).setStatus(currentPlayer.getStatus());
+                if (logic.isValidMove(board, row, col)) {
+                    board.getCells(row, col).setStatus(currentPlayer.getStatus());
                     break; // Coup valide, sortir de la boucle
                 } else {
                     gomokuView.showMessage("Coup invalide. Essayez encore.");
@@ -66,11 +68,11 @@ public class GomokuController {
             }
 
             // Vérifier victoire ou égalité
-            if (logic.isWinningMove(row, col, currentPlayer.getStatus())) {
+            if (logic.isWinningMove(board, row, col, currentPlayer.getStatus())) {
                 gomokuView.displayBoard(board);
                 gomokuView.showMessage("Le gagnant est : " + currentPlayer.getStatus() + " !");
                 break; // Terminer la boucle principale
-            } else if (logic.isDraw()) {
+            } else if (logic.isDraw(board)) {
                 gomokuView.displayBoard(board);
                 gomokuView.showMessage("Match nul !");
                 break; // Terminer la boucle principale

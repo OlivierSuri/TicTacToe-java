@@ -1,15 +1,16 @@
 package tictactoe;
 
-import tictactoe.model.Board;
+import common.model.Board;
 import tictactoe.model.Status;
+
 
 public class TicTacToeLogic {
 
     public boolean isValidMove(Board board, int row, int col) {
-        if (row < 0 || col < 0 || row >= board.getSize() || col >= board.getSize()) {
+        if (row < 0 || col < 0 || row >= board.getSizeX() || col >= board.getSizeY()) {
             return false;
         }
-        return board.getCell(row, col).isEmpty();
+        return board.getCells(row, col).isEmpty();
     }
 
 
@@ -25,13 +26,13 @@ public class TicTacToeLogic {
 //            for (int j = 0; j < board.getSize(); j++) {
 
                 // Vérifier la ligne
-                if (checkDirection(row, col, status, 0, 1, winRangeScanne)) return true; // Horizontal
+                if (checkDirection(board, row, col, status, 0, 1, winRangeScanne)) return true; // Horizontal
                 // Vérifier la colonne
-                if (checkDirection(row, col, status, 1, 0, winRangeScanne)) return true; // Vertical
+                if (checkDirection(board, row, col, status, 1, 0, winRangeScanne)) return true; // Vertical
                 // Vérifier diagonale principale
-                if (checkDirection(row, col, status, 1, 1, winRangeScanne)) return true; // Diagonale principale
+                if (checkDirection(board, row, col, status, 1, 1, winRangeScanne)) return true; // Diagonale principale
                 // Vérifier diagonale secondaire
-                if (checkDirection(row, col, status, 1, -1, winRangeScanne)) return true; // Diagonale secondaire
+                if (checkDirection(board, row, col, status, 1, -1, winRangeScanne)) return true; // Diagonale secondaire
 
 //            }
 //
@@ -49,7 +50,7 @@ public class TicTacToeLogic {
             int newRow = row + k * dRow;
             int newCol = col + k * dCol;
             if (!board.exist(newRow, newCol) ||
-                    !board.getCell(newRow, newCol).getStatus().equals(status)) {
+                    !board.getCells(newRow, newCol).getStatus().equals(status)) {
                 break;
             }
             count++;
@@ -60,7 +61,7 @@ public class TicTacToeLogic {
             int newRow = row - i * dRow;
             int newCol = col - i * dCol;
             if (!board.exist(newRow, newCol) ||
-                    !board.getCell(newRow, newCol).getStatus().equals(status)) {
+                    !board.getCells(newRow, newCol).getStatus().equals(status)) {
                 break;
             }
             count++;

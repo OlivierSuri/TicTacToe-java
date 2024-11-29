@@ -1,4 +1,6 @@
-package tictactoe.model;
+package common.model;
+
+import tictactoe.model.Status;
 
 public class Cell {
 

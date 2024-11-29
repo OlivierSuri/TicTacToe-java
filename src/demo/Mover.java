@@ -1,6 +1,6 @@
 package demo;
 
-import tictactoe.model.Board;
+import common.model.Board;
 
 public interface Mover {
     Position getMove(Board board);

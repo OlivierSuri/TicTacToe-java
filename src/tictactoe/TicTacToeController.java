@@ -1,11 +1,17 @@
 package tictactoe;
 
-import tictactoe.model.*;
+import games.Game;
+
+import common.model.Board;
+import tictactoe.model.ArtificialPlayer;
+import tictactoe.model.HumanPlayer;
+import tictactoe.model.Player;
+import tictactoe.model.Status;
 
 import java.util.Scanner;
 
 
-public class TicTacToeController {
+public class TicTacToeController implements Game {
     private final Board board;
     private final TicTacToeLogic logic;
     private final TicTacToeView ticTacToeView;
@@ -14,12 +20,13 @@ public class TicTacToeController {
     private Player player2;
 
     public TicTacToeController() {
-        board = new Board();
+        board = new Board(3,3,3);
         logic = new TicTacToeLogic();
         interaction = new InteractionUtilisateur(); // Créer une instance
         ticTacToeView = new TicTacToeView(); // Passer l'interaction à la vue
     }
 
+    @Override
     public void startGame() {
 
         // Affichage choix du type de partie
@@ -53,19 +60,19 @@ public class TicTacToeController {
             // Valider et appliquer le coup
             int row, col;
             while (true) {
-//                int[] move = currentPlayer.getMove(board); // Obtenir le mouvement en polymorphisme de player
-                    int[] move;
-                       if (currentPlayer instanceof ArtificialPlayer ap){ //obtenir le mouvement de chaque player human ou IA
-                          move = ap.getMove(board);  //respect MVC
-                       }else {
-                        move = interaction.getMoveInput();
-                        }
+                int[] move = currentPlayer.getMove(board); // Obtenir le mouvement en polymorphisme de player
+//                    int[] move;
+//                       if (currentPlayer instanceof ArtificialPlayer ap){ //obtenir le mouvement de chaque player human ou IA
+//                          move = ap.getMove(board);  //respect MVC
+//                       }else {
+//                        move = interaction.getMoveInput();
+//                        }
 
                 row = move[0];
                 col = move[1];
 
                 if (logic.isValidMove(board, row, col)) {
-                    board.getCell(row, col).setStatus(currentPlayer.getStatus());
+                    board.getCells(row, col).setStatus(currentPlayer.getStatus());
                     break; // Coup valide, sortir de la boucle
                 } else {
                     ticTacToeView.showMessage("Coup invalide. Essayez encore.");

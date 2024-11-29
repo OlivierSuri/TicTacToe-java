@@ -1,11 +1,9 @@
-import gomoku.GomokuController;
-import tictactoe.TicTacToeController;
+import application.ApplicationController;
+import connect4.ConnectFourController;
 
 public class Main {
     public static void main(String[] args) {
-        TicTacToeController controller = new TicTacToeController();
-        controller.startGame();
-//        GomokuController gomController  = new GomokuController();
-//        gomController.startGame();
+        ApplicationController appController = new ApplicationController();
+        appController.startApplication();
     }
 }

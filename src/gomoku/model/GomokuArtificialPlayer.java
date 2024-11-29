@@ -1,5 +1,6 @@
 package gomoku.model;
 
+import common.model.Board;
 import tictactoe.model.Status;
 
 import java.util.Random;
@@ -14,12 +15,12 @@ public class GomokuArtificialPlayer extends GomokuPlayer {
     }
 
     @Override
-    public int[] getMove(GomokuBoard board) {
+    public int[] getMove(Board board) {
         int row, col;
         do {
-            row = random.nextInt(board.getSize());
-            col = random.nextInt(board.getSize());
-        } while (!board.getCell(row, col).isEmpty());
+            row = random.nextInt(board.getSizeX());
+            col = random.nextInt(board.getSizeY());
+        } while (!board.getCells(row, col).isEmpty());
         return new int[]{row, col};
     }
 }
