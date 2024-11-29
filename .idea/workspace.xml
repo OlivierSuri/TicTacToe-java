@@ -5,29 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="094c77cf-a1e1-459f-94da-025ab89bedb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/model/ArtificialPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/model/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/model/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connect4/ConnectFourController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/ConnectFourController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connect4/ConnectFourLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/ConnectFourLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connect4/ConnectFourView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/ConnectFourView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connect4/model/ArtificialPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/model/ArtificialPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connect4/model/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/model/HumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connect4/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gomoku/GomokuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/GomokuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gomoku/GomokuLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/GomokuLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gomoku/model/GomHumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/model/GomHumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gomoku/model/GomokuArtificialPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/model/GomokuArtificialPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gomoku/model/GomokuPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/model/GomokuPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/TicTacToeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TicTacToeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/TicTacToeLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TicTacToeLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/TicTacToeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TicTacToeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/ArtificialPlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/model/HumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/model/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gomoku/GomokuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/GomokuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gomoku/model/GomHumanPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gomoku/model/GomokuArtificialPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gomoku/model/GomokuPlayer.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +105,7 @@
       <workItem from="1732608728179" duration="22575000" />
       <workItem from="1732696030357" duration="19812000" />
       <workItem from="1732780986118" duration="23626000" />
-      <workItem from="1732867035525" duration="11319000" />
+      <workItem from="1732867035525" duration="13303000" />
     </task>
     <servers />
   </component>

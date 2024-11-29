@@ -2,25 +2,25 @@ package gomoku;
 
 import common.model.Status;
 import games.Game;
-import gomoku.model.GomHumanPlayer;
-import gomoku.model.GomokuArtificialPlayer;
+import common.model.Player;
+import common.model.ArtificialPlayer;
 import common.model.Board;
-import gomoku.model.GomokuPlayer;
+import common.model.HumanPlayer;
 import tictactoe.InteractionUtilisateur;
-
 
 public class GomokuController implements Game {
 
     private final Board board;
     private final GomokuLogic logic;
     private final GomokuView gomokuView;
-    private GomokuPlayer player1;
-    private GomokuPlayer player2;
+    private final InteractionUtilisateur interaction;
+    private Player player1;
+    private Player player2;
 
     public GomokuController() {
         board = new Board(15,15,5);
         logic = new GomokuLogic();
-        InteractionUtilisateur interaction = new InteractionUtilisateur(); // Créer une instance
+        interaction = new InteractionUtilisateur(); // Créer une instance
         gomokuView = new GomokuView(interaction); // Passer l'interaction à la vue
     }
 
@@ -31,23 +31,23 @@ public class GomokuController implements Game {
 
         switch (gameType) {
             case 1: // Joueur contre Joueur
-                player1 = new GomHumanPlayer(Status.X, gomokuView);
-                player2 = new GomHumanPlayer(Status.O, gomokuView);
+                player1 = new HumanPlayer(Status.X, interaction);
+                player2 = new HumanPlayer(Status.O, interaction);
                 break;
             case 2: // Joueur contre IA
-                player1 = new GomHumanPlayer(Status.X, gomokuView);
-                player2 = new GomokuArtificialPlayer(Status.O);
+                player1 = new HumanPlayer(Status.X, interaction);
+                player2 = new ArtificialPlayer(Status.O);
                 break;
             case 3: // IA contre IA
-                player1 = new GomokuArtificialPlayer(Status.X);
-                player2 = new GomokuArtificialPlayer(Status.O);
+                player1 = new ArtificialPlayer(Status.X);
+                player2 = new ArtificialPlayer(Status.O);
                 break;
             default:
                 gomokuView.showMessage("Choix invalide. Relancez le jeu.");
                 return; // Arrête le jeu si le type est invalide
         }
 
-        GomokuPlayer currentPlayer = player1; // Commence par le joueur 1
+        Player currentPlayer = player1; // Commence par le joueur 1
 
         while (true) {
             gomokuView.displayBoard(board); // Afficher le plateau

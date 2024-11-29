@@ -1,6 +1,6 @@
 package gomoku;
 
-import gomoku.model.GomHumanPlayer;
+import common.model.Player;
 import common.model.Board;
 import tictactoe.InteractionUtilisateur;
 
@@ -50,7 +50,7 @@ public class GomokuView {
         return gameTypeChoice;
     }
 
-    public int[] getMove(GomHumanPlayer Player) {
+    public int[] getMove(Player Player) {
         System.out.println(Player.getStatus() + ", entrez vos coordonnées :");
         System.out.print("Ligne (0 à 14) : ");
         int row = interaction.getIntInput();
