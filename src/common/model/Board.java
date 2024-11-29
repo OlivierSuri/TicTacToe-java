@@ -9,7 +9,7 @@ public class Board {
     public Board(int sizeX, int sizeY, int winRangeScanne) {
         this.sizeX = sizeX;
         this.sizeY = sizeY;
-        this.winRangeScanne = 0;
+        this.winRangeScanne = winRangeScanne;
         cells = new Cell[sizeX][sizeY];
         for (int i = 0; i < sizeX; i++) {
             for (int j = 0; j < sizeY; j++) {

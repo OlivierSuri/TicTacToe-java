@@ -1,8 +1,8 @@
 package connect4.model;
 
 import common.model.Board;
+import common.model.Status;
 import connect4.C4InteractionUtilisateur;
-import tictactoe.model.Status;
 
 public class HumanPlayer extends Player {
     private final C4InteractionUtilisateur interaction;

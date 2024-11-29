@@ -1,7 +1,5 @@
 package common.model;
 
-import tictactoe.model.Status;
-
 public class Cell {
 
     private Status status;
@@ -15,16 +13,19 @@ public class Cell {
     }
 
     public Status getStatus() {
+
         return this.status;
     }
     public void setStatus(Status status) {
         this.status = status;
     }
     public String toString() {
+
         return getRepresentation();
     }
 
     public boolean isEmpty() {
+
         return status == Status.EMPTY;
     }
 

@@ -1,7 +1,7 @@
 package tictactoe;
 
 import common.model.Board;
-import tictactoe.model.Player;
+import common.model.Player;
 
 public class TicTacToeView {
 

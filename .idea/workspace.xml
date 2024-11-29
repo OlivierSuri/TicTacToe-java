@@ -5,42 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="094c77cf-a1e1-459f-94da-025ab89bedb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/application/ApplicationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/GameFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/Interaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/MenuApplicationView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/model/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/model/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connect4/C4InteractionUtilisateur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connect4/ConnectFourController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connect4/ConnectFourLogic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connect4/ConnectFourView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connect4/model/ArtificialPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connect4/model/HumanPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connect4/model/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/games/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/model/ArtificialPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo/AIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/AIPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo/GameRulesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/GameRulesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo/Mover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Mover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo/PlayerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/PlayerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/model/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connect4/ConnectFourController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/ConnectFourController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connect4/ConnectFourLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/ConnectFourLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connect4/ConnectFourView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/ConnectFourView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connect4/model/ArtificialPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/model/ArtificialPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connect4/model/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/model/HumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connect4/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect4/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gomoku/GomokuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/GomokuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gomoku/GomokuLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/GomokuLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gomoku/GomokuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/GomokuView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gomoku/model/GomHumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/model/GomHumanPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gomoku/model/GomokuArtificialPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/model/GomokuArtificialPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gomoku/model/GomokuBoard.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gomoku/model/GomokuPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gomoku/model/GomokuPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe/TicTacToeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TicTacToeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe/TicTacToeLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TicTacToeLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe/TicTacToeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TicTacToeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/ArtificialPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/model/ArtificialPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/Cell.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/model/HumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/ArtificialPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/model/HumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tictactoe/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/model/Status.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +38,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -73,26 +60,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/olivier.moulin/Downloads/remedEnum&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/olivier.moulin/Downloads/remedEnum",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -134,7 +121,7 @@
       <workItem from="1732608728179" duration="22575000" />
       <workItem from="1732696030357" duration="19812000" />
       <workItem from="1732780986118" duration="23626000" />
-      <workItem from="1732867035525" duration="6019000" />
+      <workItem from="1732867035525" duration="11319000" />
     </task>
     <servers />
   </component>
@@ -177,11 +164,24 @@
           <line>42</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tictactoe/TicTacToeLogic.java</url>
+          <line>28</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tictactoe/TicTacToeController.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="status" />
+        <watch expression="status" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

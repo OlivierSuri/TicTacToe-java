@@ -1,7 +1,7 @@
 package connect4;
 
 import common.model.Board;
-import tictactoe.model.Status;
+import common.model.Status;
 
 public class ConnectFourLogic {
 

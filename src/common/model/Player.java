@@ -1,17 +1,18 @@
-package tictactoe.model;
-
-import common.model.Board;
+package common.model;
 
 public abstract class Player {
     Status status;
 
     public Player(Status status) {
+
         this.status = status;
     }
 
     public String getRepresentation() {
+
         return status.getValue();
     }
+
     public Status getStatus() {
         return status;
     }

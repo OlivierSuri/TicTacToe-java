@@ -1,12 +1,12 @@
 package gomoku;
 
+import common.model.Status;
 import games.Game;
 import gomoku.model.GomHumanPlayer;
 import gomoku.model.GomokuArtificialPlayer;
 import common.model.Board;
 import gomoku.model.GomokuPlayer;
 import tictactoe.InteractionUtilisateur;
-import tictactoe.model.Status;
 
 
 public class GomokuController implements Game {

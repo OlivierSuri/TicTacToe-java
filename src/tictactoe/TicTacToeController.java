@@ -1,14 +1,7 @@
 package tictactoe;
 
+import common.model.*;
 import games.Game;
-
-import common.model.Board;
-import tictactoe.model.ArtificialPlayer;
-import tictactoe.model.HumanPlayer;
-import tictactoe.model.Player;
-import tictactoe.model.Status;
-
-import java.util.Scanner;
 
 
 public class TicTacToeController implements Game {

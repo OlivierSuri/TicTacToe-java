@@ -1,6 +1,4 @@
-package tictactoe.model;
-
-import common.model.Board;
+package common.model;
 
 import java.util.Random;
 

@@ -1,7 +1,6 @@
 package connect4;
 
 import common.model.Board;
-import tictactoe.model.Status;
 
 
 public class ConnectFourView {

@@ -1,8 +1,8 @@
 package gomoku.model;
 
 import common.model.Board;
+import common.model.Status;
 import gomoku.GomokuView;
-import tictactoe.model.Status;
 
 public class GomHumanPlayer extends GomokuPlayer {
 

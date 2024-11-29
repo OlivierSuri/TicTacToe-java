@@ -1,7 +1,7 @@
 package connect4.model;
 
 import common.model.Board;
-import tictactoe.model.Status;
+import common.model.Status;
 
 import java.util.Random;
 

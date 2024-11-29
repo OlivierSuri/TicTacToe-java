@@ -1,11 +1,11 @@
 package connect4;
 
+import common.model.Status;
 import connect4.model.ArtificialPlayer;
 import common.model.Board;
 import connect4.model.HumanPlayer;
 import connect4.model.Player;
 import games.Game;
-import tictactoe.model.Status;
 
 public class ConnectFourController implements Game {
     private final Board board;

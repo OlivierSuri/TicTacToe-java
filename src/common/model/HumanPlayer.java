@@ -1,6 +1,5 @@
-package tictactoe.model;
+package common.model;
 
-import common.model.Board;
 import tictactoe.InteractionUtilisateur;
 
 public class HumanPlayer extends Player {
@@ -19,4 +18,3 @@ public class HumanPlayer extends Player {
         return interaction.getMoveInput();
     }
 }
-

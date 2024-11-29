@@ -1,4 +1,4 @@
-package tictactoe.model;
+package common.model;
 
 public enum Status {
     EMPTY ("   "),
