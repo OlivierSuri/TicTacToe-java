@@ -1,6 +1,8 @@
-package application;
+package controller.application;
 
-import games.Game;
+import model.games.Game;
+import view.Interaction;
+import view.MenuApplicationView;
 
 public class ApplicationController {
     private MenuApplicationView menu;
@@ -19,7 +21,7 @@ public class ApplicationController {
         if (game != null) {
             game.startGame();
         }else {
-            menu.showMessage("Choix invalide. Relancez l'application.");
+            menu.showMessage("Choix invalide. Relancez l'controller.application.");
         }
     }
 }

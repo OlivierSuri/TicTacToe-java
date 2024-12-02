@@ -1,9 +1,8 @@
-package connect4;
+package model.common.model;
 
-import common.model.Board;
-import common.model.Status;
+import model.common.Status;
 
-public class ConnectFourLogic {
+public class Logic {
 
     public boolean isValidMove(Board board, int row, int col) {
         if (row < 0 || col < 0 || row >= board.getSizeX() || col >= board.getSizeY()) {
@@ -69,5 +68,4 @@ public class ConnectFourLogic {
         // Vérifier si on a atteint le nombre requis de cases consécutives
         return count >= winRangeScanne;
     }
-
 }

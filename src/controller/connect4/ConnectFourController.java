@@ -1,22 +1,24 @@
-package connect4;
+package controller.connect4;
 
-import common.model.*;
-import games.Game;
-import common.model.InteractionUtilisateur;
+import model.common.*;
+import model.common.model.*;
+import view.view.InteractionUtilisateur;
+import view.view.View;
+import model.games.Game;
 
 public class ConnectFourController implements Game {
     private final Board board;
-    private final ConnectFourView view;
+    private final View view;
     private final InteractionUtilisateur interaction;
-    private final ConnectFourLogic logic;
+    private final Logic logic;
     private Player player1;
     private Player player2;
 
     public ConnectFourController() {
-        board = new Board(6,7,4, 1);
-        view = new ConnectFourView();
+        board = new Board(6,7,4, 1, 7);
+        view = new View();
         interaction = new InteractionUtilisateur();
-        logic = new ConnectFourLogic();
+        logic = new Logic();
     }
 
     @Override

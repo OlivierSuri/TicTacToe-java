@@ -1,6 +1,6 @@
 package demo;
 
-import common.model.InteractionUtilisateur;
+import view.view.InteractionUtilisateur;
 
 public class InteractUtil extends InteractionUtilisateur implements PositionGenerator {
     @Override

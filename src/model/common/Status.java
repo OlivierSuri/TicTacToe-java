@@ -1,4 +1,4 @@
-package common.model;
+package model.common;
 
 public enum Status {
     EMPTY ("   "),

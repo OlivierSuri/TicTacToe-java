@@ -1,4 +1,6 @@
-package common.model;
+package model.common.model;
+
+import model.common.Status;
 
 import java.util.Random;
 
