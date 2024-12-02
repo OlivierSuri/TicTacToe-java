@@ -1,22 +1,20 @@
-package common.model;
+package model.common.model;
 
 public class Board {
     private final int sizeX;
     private final int sizeY;
     private Cell[][] cells;
     private int winRangeScanne;
-
-    public int getNbCoord() {
-        return nbCoord;
-    }
-
+    private int cellWidth;
     private int nbCoord;
 
-    public Board(int sizeX, int sizeY, int winRangeScanne, int nbCoord) {
+
+    public Board(int sizeX, int sizeY, int winRangeScanne, int nbCoord, int cellWidth) {
         this.sizeX = sizeX;
         this.sizeY = sizeY;
         this.winRangeScanne = winRangeScanne;
         this.nbCoord = nbCoord;
+        this.cellWidth = cellWidth;
         cells = new Cell[sizeX][sizeY];
         for (int i = 0; i < sizeX; i++) {
             for (int j = 0; j < sizeY; j++) {
@@ -56,6 +54,13 @@ public class Board {
     }
     public Cell getCells(int row, int col) {
         return cells[row][col];
+    }
+    public int getNbCoord() {
+        return nbCoord;
+    }
+
+    public int getCellWidth() {
+        return cellWidth;
     }
 
     public int getWinRangeScanne() {

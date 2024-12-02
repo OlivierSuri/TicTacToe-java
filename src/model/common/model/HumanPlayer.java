@@ -1,4 +1,7 @@
-package common.model;
+package model.common.model;
+
+import view.view.InteractionUtilisateur;
+import model.common.Status;
 
 public class HumanPlayer extends Player {
 

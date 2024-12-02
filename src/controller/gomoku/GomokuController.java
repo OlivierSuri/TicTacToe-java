@@ -1,33 +1,34 @@
-package tictactoe;
+package controller.gomoku;
 
-import common.model.*;
-import games.Game;
+import model.common.Status;
+import model.common.model.*;
+import view.view.View;
+import model.games.Game;
+import view.view.InteractionUtilisateur;
 
+public class GomokuController implements Game {
 
-public class TicTacToeController implements Game {
     private final Board board;
-    private final TicTacToeLogic logic;
-    private final TicTacToeView ticTacToeView;
+    private final Logic logic;
+    private final View gomokuView;
     private final InteractionUtilisateur interaction;
     private Player player1;
     private Player player2;
 
-    public TicTacToeController() {
-        board = new Board(3,3,3, 2);
-        logic = new TicTacToeLogic();
+    public GomokuController() {
+        board = new Board(15,15,5, 2, 6);
+        logic = new Logic();
         interaction = new InteractionUtilisateur(); // Créer une instance
-        ticTacToeView = new TicTacToeView(); // Passer l'interaction à la vue
+        gomokuView = new View(); // Passer l'interaction à la vue
     }
 
     @Override
     public void startGame() {
-
-        // Affichage choix du type de partie
-        ticTacToeView.displayMenuGameTypeChoice();
+        // Choix du type de partie
+        gomokuView.displayMenuGameTypeChoice();
         int gameType = interaction.menuGameTypeChoice();
 
-
-                switch (gameType) {
+        switch (gameType) {
             case 1: // Joueur contre Joueur
                 player1 = new HumanPlayer(Status.X, interaction);
                 player2 = new HumanPlayer(Status.O, interaction);
@@ -41,26 +42,19 @@ public class TicTacToeController implements Game {
                 player2 = new ArtificialPlayer(Status.O);
                 break;
             default:
-                ticTacToeView.showMessage("Choix invalide. Relancez le jeu.");
+                gomokuView.showMessage("Choix invalide. Relancez le jeu.");
                 return; // Arrête le jeu si le type est invalide
         }
 
         Player currentPlayer = player1; // Commence par le joueur 1
 
         while (true) {
-            ticTacToeView.displayBoard(board); // Afficher le plateau
-            ticTacToeView.displayPlayerMoveMenu(currentPlayer);
+            gomokuView.displayBoard(board); // Afficher le plateau
+
             // Valider et appliquer le coup
             int row, col;
             while (true) {
-                int[] move = currentPlayer.getMove(board); // Obtenir le mouvement en polymorphisme de player
-//                    int[] move;
-//                       if (currentPlayer instanceof ArtificialPlayer ap){ //obtenir le mouvement de chaque player human ou IA
-//                          move = ap.getMove(board);  //respect MVC
-//                       }else {
-//                        move = interaction.getMoveInput();
-//                        }
-
+                int[] move = currentPlayer.getMove(board); // Obtenir le mouvement
                 row = move[0];
                 col = move[1];
 
@@ -68,18 +62,18 @@ public class TicTacToeController implements Game {
                     board.getCells(row, col).setStatus(currentPlayer.getStatus());
                     break; // Coup valide, sortir de la boucle
                 } else {
-                    ticTacToeView.showMessage("Coup invalide. Essayez encore.");
+                    gomokuView.showMessage("Coup invalide. Essayez encore.");
                 }
             }
 
             // Vérifier victoire ou égalité
             if (logic.isWinningMove(board, row, col, currentPlayer.getStatus())) {
-                ticTacToeView.displayBoard(board);
-                ticTacToeView.showMessage("Le gagnant est : " + currentPlayer.getStatus() + " !");
+                gomokuView.displayBoard(board);
+                gomokuView.showMessage("Le gagnant est : " + currentPlayer.getStatus() + " !");
                 break; // Terminer la boucle principale
             } else if (logic.isDraw(board)) {
-                ticTacToeView.displayBoard(board);
-                ticTacToeView.showMessage("Match nul !");
+                gomokuView.displayBoard(board);
+                gomokuView.showMessage("Match nul !");
                 break; // Terminer la boucle principale
             }
 
@@ -87,5 +81,4 @@ public class TicTacToeController implements Game {
             currentPlayer = (currentPlayer == player1) ? player2 : player1;
         }
     }
-
 }

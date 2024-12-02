@@ -1,4 +1,4 @@
-package common.model;
+package view.view;
 
 import java.util.Scanner;
 

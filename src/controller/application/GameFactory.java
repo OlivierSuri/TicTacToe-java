@@ -1,9 +1,9 @@
-package application;
+package controller.application;
 
-import connect4.ConnectFourController;
-import games.Game;
-import gomoku.GomokuController;
-import tictactoe.TicTacToeController;
+import controller.connect4.ConnectFourController;
+import model.games.Game;
+import controller.gomoku.GomokuController;
+import controller.tictactoe.TicTacToeController;
 
 public class GameFactory {
 

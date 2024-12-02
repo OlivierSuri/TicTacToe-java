@@ -1,6 +1,6 @@
 package demo;
 
-import common.model.Board;
+import model.common.model.Board;
 
 public class GameRulesService {
 
